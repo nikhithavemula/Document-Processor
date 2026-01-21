@@ -13,16 +13,36 @@ A simple AI-powered app that lets you upload PDF files and ask natural language 
 ## Setup and Run
 
 1. Clone the repo
-git clone https://github.com/yourusername/ai-pdf-processor.git
-cd ai-pdf-processor
+    ```git clone https://github.com/yourusername/ai-pdf-processor.git```
+
+    ```cd ai-pdf-processor```
 
 2. Install dependencies
 pip install -r requirements.txt
 
 3. Set up Google GenAI API key
-export GOOGLE_API_KEY="your_api_key_here"   # Linux/Mac
 
-set GOOGLE_API_KEY="your_api_key_here"      # Windows
+
+     Step 1: Go to [Google Cloud Console](https://console.cloud.google.com/).
+
+     Step 2: Create a new project or select an existing project.
+
+     Step 3: Navigate to **APIs & Services → Credentials**.
+
+     Step 4: Click **Create Credentials → API Key**. Copy the generated key.
+
+    Step 5: Enable the **Generative AI API** for your project:
+   
+   - Go to **APIs & Services → Library**
+     
+   - Search for **Generative AI API** and click **Enable**
+
+4. Set the API key as an environment variable on your machine:
+
+
+    ```export GOOGLE_API_KEY="your_api_key_here"```   # Linux/Mac
+
+    ```set GOOGLE_API_KEY="your_api_key_here"```      # Windows
 
 5. Run the app
 ```streamlit run app.py```
@@ -35,3 +55,10 @@ set GOOGLE_API_KEY="your_api_key_here"      # Windows
 - Streamlit
 - PyPDF
 - Google GenAI Python Client
+
+## Notes
+
+- Make sure to upload only PDF files.
+- Large PDFs may be truncated due to AI input limits.
+- Q&A history is saved only for the current session.
+
