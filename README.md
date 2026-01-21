@@ -24,7 +24,7 @@ export GOOGLE_API_KEY="your_api_key_here"   # Linux/Mac
 set GOOGLE_API_KEY="your_api_key_here"      # Windows
 
 4. Run the app
-streamlit run app.py
+```streamlit run app.py```
 
 5. Open the browser, upload PDFs, and start asking questions
 
